@@ -1,3 +1,11 @@
-// import Vue from './vendor/vue.esm.browser.js';
+import Vue from './vendor/vue.esm.browser.js';
 
-// new Vue();
+const app = new Vue({
+  methods: {
+    incValue(event) {
+      event.target.innerHTML++;
+    }
+  }
+});
+
+app.$mount('#app');
