@@ -6,7 +6,14 @@
 </head>
 <body>
 
-<!-- Решение -->
+<div id="app">
+  <p>
+    <span v-for="n in 5">
+      <input v-model="meetupId" type="radio" name="meetupNum" :value="n">{{ n }}
+    </span>
+  </p>
+  <p v-if="meetupTitle">{{ meetupTitle }}</p>
+</div>
 
 <script type="module" src="script.js"></script>
 </body>
