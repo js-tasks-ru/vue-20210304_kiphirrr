@@ -1,8 +1,16 @@
 export default {
   name: 'MeetupCover',
 
+  props: {
+    link : {
+      type: String,
+      default: null
+    },
+    title: String
+  },
+
   template: `
-    <div class="meetup-cover" style="--bg-url: url('https://course-vue.javascript.ru/api/images/2')">
-        <h1 class="meetup-cover__title">Title</h1>
+    <div class="meetup-cover"  :style="link ? \`--bg-url: url('\${link}')\` : null">
+        <h1 class="meetup-cover__title">{{ title }}</h1>
     </div>`,
 };
