@@ -4,7 +4,10 @@ export default {
   name: 'MeetupAgendaItem',
 
   props: {
-    agendaItem: Object
+    agendaItem: {
+      type: Object,
+      required: true
+    }
   },
 
   data() {

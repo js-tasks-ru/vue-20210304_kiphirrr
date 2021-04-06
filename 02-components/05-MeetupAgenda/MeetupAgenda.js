@@ -8,7 +8,10 @@ export default {
   },
 
   props: {
-    agenda : Array
+    agenda : {
+      type: Array,
+      required: true
+    }
   },
 
   template: `
