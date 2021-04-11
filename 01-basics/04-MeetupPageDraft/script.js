@@ -53,7 +53,7 @@ const app = new Vue({
 
   computed: {
     meetup() {
-      let meetup = this.rawMeetup;
+      let meetup = {...this.rawMeetup};
 
       if (!meetup) {
         return null;
