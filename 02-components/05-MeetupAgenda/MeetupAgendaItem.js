@@ -10,13 +10,13 @@ export default {
     }
   },
 
-  data() {
-    return {
-      agendaItemMod: {
+  computed: {
+    agendaItemMod() {
+      return {
         ...this.agendaItem,
         'icon': `/assets/icons/icon-${getAgendaItemIcons()[this.agendaItem.type]}.svg`,
         typeTitle: getAgendaItemDefaultTitles()[this.agendaItem.type]
-      }
+      };
     }
   },
 

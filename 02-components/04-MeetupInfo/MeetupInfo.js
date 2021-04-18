@@ -16,10 +16,12 @@ export default {
     }
   },
 
-  data() {
-    return {
-      formatedDate: this.formatDate(this.date),
-      isoDate: new Date(this.date).toISOString().substring(0, 10)
+  computed: {
+    formatedDate() {
+      return this.formatDate(this.date);
+    },
+    isoDate() {
+      return new Date(this.date).toISOString().substring(0, 10);
     }
   },
 

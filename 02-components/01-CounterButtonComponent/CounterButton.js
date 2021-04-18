@@ -15,9 +15,9 @@ export default {
 
   methods: {
     increment(value) {
-      this.$emit('increment', ++value);
+      this.$emit('increment', value + 1);
     }
   },
 
-  template: '<button type="button" :value="count" @click="increment(count)">{{ count }}</button>',
+  template: '<button type="button" @click="increment(count)">{{ count }}</button>',
 };
