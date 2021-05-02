@@ -20,7 +20,7 @@
         <div class="meetup__content">
           <template v-if="meetup.description">
             <h3>Описание</h3>
-            <p class="meetup-description" v-html="meetup.description"></p>
+            <p class="meetup-description">{{ meetup.description }}</p>
           </template>
 
           <h3>Программа</h3>
@@ -32,11 +32,11 @@
               </div>
               <div class="meetup-agenda__item-col">{{ agendaItem.startsAt }} - {{ agendaItem.endsAt }}</div>
               <div class="meetup-agenda__item-col">
-                <h5 class="meetup-agenda__title" v-html="agendaItem.title ? agendaItem.title : agendaItem.typeTitle"></h5>
+                <h5 class="meetup-agenda__title">{{ agendaItem.title ? agendaItem.title : agendaItem.typeTitle }}</h5>
                 <template v-if="agendaItem.type == 'talk'">
                   <p><span>{{ agendaItem.speaker }}</span><span class="meetup-agenda__dot"></span><span class="meetup-agenda__lang">{{ agendaItem.language }}</span></p>
                 </template>
-                <p v-if="agendaItem.description" v-html="agendaItem.description"></p>
+                <p v-if="agendaItem.description">{{ agendaItem.description }}</p>
               </div>
             </div>
 
