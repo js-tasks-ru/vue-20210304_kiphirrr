@@ -26,7 +26,7 @@ export const MeetupsCalendar = {
   data() {
     return {
       date: new Date(),
-      deltaDay: LOCALE == "ru-RU" ? 1 : 1,
+      deltaDay: LOCALE == "ru-RU" ? 1 : 1 /* 0 */,
     };
   },
 
