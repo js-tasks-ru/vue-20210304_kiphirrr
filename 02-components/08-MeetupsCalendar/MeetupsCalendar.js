@@ -1,4 +1,4 @@
-const LOCALE = 'ru';
+const LOCALE = navigator.language;
 
 function countDaysOfMonth(year, month) {
   return new Date(year, month + 1, 0).getDate();
@@ -26,7 +26,7 @@ export const MeetupsCalendar = {
   data() {
     return {
       date: new Date(),
-      deltaDay: LOCALE == 'ru' ? 1 : 0,
+      deltaDay: LOCALE == "ru-RU" ? 1 : 1,
     };
   },
 
@@ -41,9 +41,9 @@ export const MeetupsCalendar = {
     },
 
     calendarLabel() {
-      let month = this.date.toLocaleString(/*LOCALE*/'en', {month: 'long',});
+      let month = this.date.toLocaleString(LOCALE, {month: 'long',});
       month = month.charAt(0).toUpperCase() + month.substr(1);
-      let year = this.date.toLocaleString(/*LOCALE*/'en', {year: 'numeric',});
+      let year = this.date.toLocaleString(LOCALE, {year: 'numeric',});
 
       return `${month} ${year}`;
     },
