@@ -8,14 +8,11 @@ export default {
   },
 
   props: {
-    agenda : {
-      type: Array,
-      required: true
-    }
+    agenda : Array
   },
 
   template: `
     <div class="meetup-agenda">
-      <meetup-agenda-item v-for="agendaItem in agenda" :agenda-item="agendaItem" :key="agendaItem.id"></meetup-agenda-item>
+      <meetup-agenda-item v-for="agendaItem in agenda" :agenda-item="agendaItem" :key="agendaItem.listId"></meetup-agenda-item>
     </div>`,
 };

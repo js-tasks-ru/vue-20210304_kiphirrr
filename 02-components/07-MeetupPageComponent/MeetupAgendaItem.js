@@ -4,19 +4,16 @@ export default {
   name: 'MeetupAgendaItem',
 
   props: {
-    agendaItem: {
-      type: Object,
-      required: true
-    }
+    agendaItem: Object
   },
 
-  computed: {
-    agendaItemMod() {
-      return {
+  data() {
+    return {
+      agendaItemMod: {
         ...this.agendaItem,
         'icon': `/assets/icons/icon-${getAgendaItemIcons()[this.agendaItem.type]}.svg`,
         typeTitle: getAgendaItemDefaultTitles()[this.agendaItem.type]
-      };
+      }
     }
   },
 
